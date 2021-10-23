@@ -14,7 +14,7 @@ class money implements Money{
     }
 
     multiplyAndRound(by: number): Money {
-        return new money(this.amountInCents * by, this.currency);
+        return new money(Math.round(this.amountInCents * by), this.currency);
     }
 }
 
