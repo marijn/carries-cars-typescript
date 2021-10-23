@@ -4,8 +4,8 @@ import {EUR, USD} from "./Money";
 export class MoneySpec {
     @Test()
     Money_equalTo_detects_identical_values() {
-        const ninetyNineCents = EUR(90);
-        const alsoNinetyNineCents = EUR(90);
+        const ninetyNineCents = EUR(99);
+        const alsoNinetyNineCents = EUR(99);
 
         Expect(ninetyNineCents.equalTo(alsoNinetyNineCents)).toBe(true);
     }
