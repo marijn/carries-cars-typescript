@@ -30,7 +30,8 @@ export class MoneySpec {
     @TestCase(EUR(33), 3, EUR(99))
     Money_multiply_multiplies_by_the_amount_provided(baseAmount: Money, multiplier: number, multipliedAmount: Money) {
         const actual = baseAmount.multiply(multiplier);
+        const expected = multipliedAmount;
 
-        Expect(actual.equalTo(multipliedAmount)).toBe(true);
+        Expect(actual.equalTo(expected)).toBe(true);
     }
 }
