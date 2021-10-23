@@ -19,7 +19,10 @@ export class MoneySpec {
     }
 
     @Test()
-    @Ignore('TODO: Implement this test scenario')
     Money_equalTo_detects_difference_in_amount() {
+        const ninetyNineCents = EUR(99);
+        const twelveCents = EUR(12);
+
+        Expect(ninetyNineCents.equalTo(twelveCents)).toBe(false);
     }
 }
