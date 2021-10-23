@@ -14,7 +14,7 @@ class money implements Money{
     }
 
     multiply(by: number): Money {
-        return this;
+        return new money(this.amountInCents * by, this.currency);
     }
 }
 
