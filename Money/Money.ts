@@ -12,10 +12,15 @@ class money implements Money{
     equalTo(other: money): boolean {
         return other.amountInCents === this.amountInCents && other.currency === this.currency;
     }
+
+    multiply(by: number): Money {
+        return this;
+    }
 }
 
 export type Money = {
     equalTo(other: Money): boolean;
+    multiply(by: number): Money;
 }
 
 export function EUR(amountInCents: number): Money {
