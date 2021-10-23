@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: run tests
-        run: ./node_modules/.bin/alsatian ./**/**/**/*.spec.ts --tap
+        run: ./node_modules/.bin/alsatian ./**/**/**/*.spec.ts
