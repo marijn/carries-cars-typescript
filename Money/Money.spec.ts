@@ -31,8 +31,9 @@ export class MoneySpec {
         const thirtyThreeCents = EUR(33);
         const ninetyNineCents = EUR(99);
         const byThree = 3;
+        const by = byThree;
 
-        const actual = thirtyThreeCents.multiply(byThree);
+        const actual = thirtyThreeCents.multiply(by);
 
         Expect(actual.equalTo(ninetyNineCents)).toBe(true);
     }
