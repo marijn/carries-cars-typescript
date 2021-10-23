@@ -1,5 +1,5 @@
 import {Expect, Ignore, Test} from 'alsatian';
-import {EUR} from "./Money";
+import {EUR, USD} from "./Money";
 
 export class MoneySpec {
     @Test()
@@ -11,8 +11,11 @@ export class MoneySpec {
     }
 
     @Test()
-    @Ignore('TODO: Implement this test scenario')
     Money_equalTo_detects_difference_of_currencies() {
+        const ninetyNineEuroCents = EUR(99);
+        const ninetyNineDollarCents = USD(99);
+
+        Expect(ninetyNineEuroCents.equalTo(ninetyNineDollarCents)).toBe(false);
     }
 
     @Test()

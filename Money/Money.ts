@@ -20,3 +20,7 @@ export type Money = {
 export function EUR(amountInCents: number): Money {
     return new money(amountInCents, Euro);
 }
+
+export function USD(amountInCents: number): Money {
+
+}
