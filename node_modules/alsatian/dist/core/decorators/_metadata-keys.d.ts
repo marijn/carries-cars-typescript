@@ -1,0 +1,12 @@
+declare const TEST_FIXTURE: "alsatian:test-fixture";
+declare const TESTS: "alsatian:tests";
+declare const FOCUS: "alsatian:focus";
+declare const IGNORE: "alsatian:ignore";
+declare const IGNORE_REASON: "alsatian:ignore-reason";
+declare const SETUP: "alsatian:setup";
+declare const SETUP_FIXTURE: "alsatian:setup-fixture";
+declare const TEARDOWN: "alsatian:teardown";
+declare const TEARDOWN_FIXTURE: "alsatian:teardown-fixture";
+declare const TEST_CASES: "alsatian:testcases";
+declare const TIMEOUT: "alsatian:timeout";
+export { TEST_FIXTURE, TESTS, FOCUS, IGNORE, IGNORE_REASON, SETUP, SETUP_FIXTURE, TEARDOWN, TEARDOWN_FIXTURE, TEST_CASES, TIMEOUT };

@@ -1,0 +1,12 @@
+{
+  "name": "carries-cars-typescript",
+  "description": "A sandbox with examples of domain modeling approaches in Typescript.",
+  "repository": {
+    "url": "https://github.com/marijn/carries-cars-typescript"
+  },
+  "devDependencies": {
+    "alsatian": "^3.2.1",
+    "typescript": "^4.4.4",
+    "tap-diff": "github:felamaslen/tap-diff#b5087c748c4c7968e71332a37f43186c7394ddfe"
+  }
+}
