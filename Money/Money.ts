@@ -22,5 +22,5 @@ export function EUR(amountInCents: number): Money {
 }
 
 export function USD(amountInCents: number): Money {
-
+    return new money(amountInCents, "USD");
 }
