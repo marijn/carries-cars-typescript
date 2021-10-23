@@ -1,4 +1,4 @@
-import {Expect, Ignore, Test} from 'alsatian';
+import {Expect, Test} from 'alsatian';
 import {EUR, USD} from "./Money";
 
 export class MoneySpec {
