@@ -25,4 +25,15 @@ export class MoneySpec {
 
         Expect(ninetyNineCents.equalTo(twelveCents)).toBe(false);
     }
+
+    @Test()
+    Money_multiply_multiplies_by_the_amount_provided() {
+        const thirtyThreeCents = EUR(33);
+        const ninetyNineCents = EUR(99);
+        const byThree = 3;
+
+        const actual = thirtyThreeCents.multiply(byThree);
+
+        Expect(actual.equalTo(ninetyNineCents)).toBe(true);
+    }
 }
