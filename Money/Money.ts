@@ -1,4 +1,4 @@
-export const Euro = "";
+export const Euro = "EUR";
 
 export type Currencies = "EUR" | "USD";
 
@@ -18,5 +18,5 @@ export type Money = {
 }
 
 export function EUR(amountInCents: number): Money {
-    return new money(amountInCents, "EUR");
+    return new money(amountInCents, Euro);
 }
