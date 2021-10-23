@@ -28,6 +28,8 @@ export class MoneySpec {
 
     @Test()
     @TestCase(EUR(33), 3, EUR(99))
+    @TestCase(EUR(30), 3.33, EUR(100))
+    @TestCase(EUR(10), 0.24, EUR(2))
     Money_multiplyAndRound_multiplies_and_rounds_by_the_multiplier_provided(baseAmount: Money, multiplier: number, multipliedAmount: Money) {
         const actual = baseAmount.multiplyAndRound(multiplier);
         const expected = multipliedAmount;
