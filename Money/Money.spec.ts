@@ -1,5 +1,5 @@
-import {Expect, Test} from 'alsatian';
-import {EUR, USD} from "./Money";
+import {Expect, Test, TestCase} from 'alsatian';
+import {EUR, Money, USD} from "./Money";
 
 export class MoneySpec {
     @Test()
@@ -27,16 +27,10 @@ export class MoneySpec {
     }
 
     @Test()
-    Money_multiply_multiplies_by_the_amount_provided() {
-        const thirtyThreeCents = EUR(33);
-        const ninetyNineCents = EUR(99);
-        const byThree = 3;
-        const multiplier = byThree;
-        const baseAmount = thirtyThreeCents;
-
+    @TestCase(EUR(33), 3, EUR(99))
+    Money_multiply_multiplies_by_the_amount_provided(baseAmount: Money, multiplier: number, expected: Money) {
         const actual = baseAmount.multiply(multiplier);
 
-        const expected = ninetyNineCents;
         Expect(actual.equalTo(expected)).toBe(true);
     }
 }
