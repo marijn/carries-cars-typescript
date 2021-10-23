@@ -36,6 +36,7 @@ export class MoneySpec {
 
         const actual = amount.multiply(by);
 
-        Expect(actual.equalTo(ninetyNineCents)).toBe(true);
+        const expected = ninetyNineCents;
+        Expect(actual.equalTo(expected)).toBe(true);
     }
 }
