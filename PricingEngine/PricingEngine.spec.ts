@@ -1,17 +1,14 @@
-import {Expect, Test} from 'alsatian';
-import {DurationInMinutes, pricingEngine} from "./PricingEngine";
-import {EUR} from "../Money/Money";
+import {Expect, Test, TestCase} from 'alsatian';
+import {Duration, DurationInMinutes, pricingEngine} from "./PricingEngine";
+import {EUR, Money} from "../Money/Money";
 
 export class PricingEngineSpec {
     @Test()
-    CalculatePrice_charged_per_minute() {
-        const thirtyCents = EUR(30);
-        const pricePerMinute = thirtyCents
-        const duration = DurationInMinutes(1)
-
+    @TestCase(EUR(30), DurationInMinutes(1), EUR(30))
+    CalculatePrice_charged_per_minute(pricePerMinute: Money, duration: Duration, totalPrice: Money) {
         const actual = pricingEngine(pricePerMinute, duration);
+        const expected = totalPrice;
 
-        const expected = thirtyCents;
         Expect(actual.equalTo(expected)).toBe(true);
     }
 }
