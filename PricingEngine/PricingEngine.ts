@@ -8,5 +8,5 @@ export const DurationInMinutes = (duration: number): Duration => {
 }
 
 export const pricingEngine: CalculatePrice = (pricePerMinute, durationInMinutes) => {
-    return pricePerMinute.multiply(durationInMinutes);
+    return pricePerMinute.multiplyAndRound(durationInMinutes);
 }

@@ -13,14 +13,14 @@ class money implements Money{
         return other.amountInCents === this.amountInCents && other.currency === this.currency;
     }
 
-    multiply(by: number): Money {
+    multiplyAndRound(by: number): Money {
         return new money(this.amountInCents * by, this.currency);
     }
 }
 
 export type Money = {
     equalTo(other: Money): boolean;
-    multiply(by: number): Money;
+    multiplyAndRound(by: number): Money;
 }
 
 export function EUR(amountInCents: number): Money {

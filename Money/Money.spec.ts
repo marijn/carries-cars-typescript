@@ -28,8 +28,8 @@ export class MoneySpec {
 
     @Test()
     @TestCase(EUR(33), 3, EUR(99))
-    Money_multiply_multiplies_and_rounds_by_the_amount_provided(baseAmount: Money, multiplier: number, multipliedAmount: Money) {
-        const actual = baseAmount.multiply(multiplier);
+    Money_multiplyAndRound_multiplies_and_rounds_by_the_amount_provided(baseAmount: Money, multiplier: number, multipliedAmount: Money) {
+        const actual = baseAmount.multiplyAndRound(multiplier);
         const expected = multipliedAmount;
 
         Expect(actual.equalTo(expected)).toBe(true);
