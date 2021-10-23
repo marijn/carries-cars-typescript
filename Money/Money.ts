@@ -1,3 +1,9 @@
 export const Euro = "";
 
-export type Money = {}
+export type Money = {
+    equalTo(other: Money): boolean;
+}
+
+export function EUR(amountInCents: number): Money {
+    return;
+}
