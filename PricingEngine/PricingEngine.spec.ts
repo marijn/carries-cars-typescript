@@ -9,8 +9,8 @@ export class PricingEngineSpec {
     @TestCase(EUR(23), DurationInMinutes(12), EUR(276))
     CalculatePrice_charged_per_minute(pricePerMinute: Money, duration: Duration, totalPrice: Money) {
         const actual = pricingEngine(pricePerMinute, duration);
-        const expected = totalPrice;
 
+        const expected = totalPrice;
         Expect(actual.equalTo(expected)).toBe(true);
     }
 }
