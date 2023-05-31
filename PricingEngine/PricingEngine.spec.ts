@@ -8,8 +8,10 @@ export class PricingEngineSpec {
     @TestCase(EUR(30), DurationInMinutes(3), EUR(90))
     @TestCase(EUR(23), DurationInMinutes(12), EUR(276))
     CalculatePrice_charged_per_minute(pricePerMinute: Money, duration: Duration, totalPrice: Money) {
+        // Act
         const actual = pricingEngine(pricePerMinute, duration);
 
+        // Assert
         const expected = totalPrice;
         Expect(actual.equalTo(expected)).toBe(true);
     }
