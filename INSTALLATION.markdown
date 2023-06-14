@@ -51,3 +51,7 @@ Frequently Asked Questions
     - What the expected results were
     - What you got in stead
    Thank you for you help in improving this experience for those that will follow in your footsteps :-)
+
+[1]: https://www.jetbrains.com/webstorm/
+[2]: https://code.visualstudio.com
+[3]: https://www.jetbrains.com/phpstorm/
